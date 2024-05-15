@@ -8,7 +8,7 @@ import (
 type courseProxy interface {
 	LearnGo(ctx context.Context, req *Request) (*Response, error)
 	// 需要扩展其他方法时，只需要在这里和 mock 定义，仍然不会暴露底层方法，聚焦在业务逻辑上
-	// LearnPiano(ctx context.Context, req *Request) (*Response, error)
+	//LearnPiano(ctx context.Context, req *Request) (*Response, error)
 }
 
 type courseServiceImpl struct {

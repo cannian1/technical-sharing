@@ -1,9 +1,11 @@
 package util
 
-import "golang.org/x/exp/constraints"
+import (
+	"cmp"
+)
 
 // BinarySearch 二分查找
-func BinarySearch[S ~[]T, T constraints.Ordered](nums S, target T) int {
+func BinarySearch[S ~[]T, T cmp.Ordered](nums S, target T) int {
 	left, right := 0, len(nums)-1
 	for left <= right {
 		mid := ((right - left) >> 1) + left
